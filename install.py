@@ -28,7 +28,7 @@ def main():
     # {ln -T} mean treat destination as a normal file, i.e. don't
     # create file *in* target if target is a dir.  this is needed for
     # the idempotence of {ln ~/v/conf/dot.zsh ~/.zsh}.
-    for f in ('.vimrc',
+    for f in ('.vimrc', '.zshrc'
              ):
         from_ = '%(home)s/%(source_dotconfig_directory)s/dot%(f)s' % locals()
         to = '%(home)s/%(f)s' % locals()
