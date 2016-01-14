@@ -42,6 +42,11 @@ def main():
         print "Linking %(localname)s to .config %(dest)s" % locals()
         c('ln -Tfs %(from_)s %(to_)s' %locals())
 
+    # Installing fonts
+    print "Installing powerline fonts"
+    c('bash ./fonts/powerline_fonts/install.sh')
+
+
 if __name__ == '__main__':
     main()
 
