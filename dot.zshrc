@@ -80,5 +80,10 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
+#
+# ############################
+# ALIAS
+# ############################
+alias open="open_command"
+alias vim="gvim -v"
 # alias ohmyzsh="mate ~/.oh-my-zsh"

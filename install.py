@@ -42,6 +42,13 @@ def main():
         print "Linking %(localname)s to .config %(dest)s" % locals()
         c('ln -Tfs %(from_)s %(to_)s' %locals())
 
+    # .oh-my-zsh directory
+    for localname, dest in [("cobalt2.zsh-theme", "themes/cobalt2.zsh-theme")]:
+        from_ = '%(home)s/%(source_dotconfig_directory)s/oh-my-zsh/%(localname)s' % locals()
+        to_ = '%(home)s/.oh-my-zsh/%(dest)s' % locals()
+        print "Linking %(localname)s to .config %(dest)s" % locals()
+        c('ln -Tfs %(from_)s %(to_)s' %locals())
+
     # Installing fonts
     print "Installing powerline fonts"
     c('bash ./fonts/powerline_fonts/install.sh')
