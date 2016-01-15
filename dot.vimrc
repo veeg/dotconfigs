@@ -123,8 +123,8 @@ set tm=500
 " Enable syntax highlighting
 syntax enable
 
-colorscheme desert
-set background=dark
+"colorscheme desert
+"set background=dark
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -403,12 +403,6 @@ function! <SID>BufcloseCloseIt()
    endif
 endfunction
 
-" PyDiction shiz
-filetype plugin on
-filetype off "force entire reload
-filetype plugin indent on
-let g:pydiction_location = '~/.vim/after/ftplugin/pydiction/complete-dict'
-
 " Autocomplete already-existing words in the file with tab (extremely useful!)
 "function InsertTabWrapper()
 "      let col = col('.') - 1
@@ -424,7 +418,7 @@ let g:pydiction_location = '~/.vim/after/ftplugin/pydiction/complete-dict'
 "========================================
 
 :autocmd FileType make set noexpandtab
-:autocmd FileType c set shiftwidth=2        |   set tabstop=2   |   set expandtab
+:autocmd FileType c set shiftwidth=4        |   set tabstop=4   |   set expandtab
 :autocmd FileType eruby set shiftwidth=2    |   set tabstop=2   |   set expandtab
 :autocmd FileType html set shiftwidth=2     |   set tabstop=2   |   set expandtab
 :autocmd FileType ruby set shiftwidth=2     |   set tabstop=2   |   set expandtab
@@ -435,6 +429,8 @@ let g:pydiction_location = '~/.vim/after/ftplugin/pydiction/complete-dict'
 :autocmd FileType yaml set shiftwidth=2      |   set tabstop=2   |   set expandtab
 :autocmd FileType tex set tw=100
 :autocmd FileType go set shiftwidth=4       |   set tabstop=4   |   set noexpandtab
+:autocmd FileType xml set shiftwidth=4      |   set tabstop=4   |   set expandtab
+:autocmd FileType xsd set shiftwidth=2      |   set tabstop=2   |   set expandtab
 
 "Gherkin markup. Need to have the ~/.vim/syntax/cucumber.vim present. Get one from
 "https://raw.github.com/tpope/vim-cucumber/master/syntax/cucumber.vim
