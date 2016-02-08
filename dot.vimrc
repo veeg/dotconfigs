@@ -416,6 +416,10 @@ endfunction
 "========================================
 "=      FileTypes                       =
 "========================================
+"
+
+:autocmd BufRead,BufNewFile *.cmake,CMakeLists.txt,*.cmake.in setf cmake
+:autocmd BufRead,BufNewFile *.ctest,*.ctest.in setf cmake
 
 :autocmd FileType make set noexpandtab
 :autocmd FileType c set shiftwidth=4        |   set tabstop=4   |   set expandtab
@@ -431,6 +435,7 @@ endfunction
 :autocmd FileType go set shiftwidth=4       |   set tabstop=4   |   set noexpandtab
 :autocmd FileType xml set shiftwidth=2      |   set tabstop=2   |   set expandtab
 :autocmd FileType xsd set shiftwidth=2      |   set tabstop=2   |   set expandtab
+:autocmd FileType cmake set shiftwidth=2      |   set tabstop=2   |   set expandtab
 
 "Gherkin markup. Need to have the ~/.vim/syntax/cucumber.vim present. Get one from
 "https://raw.github.com/tpope/vim-cucumber/master/syntax/cucumber.vim
