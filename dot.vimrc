@@ -445,3 +445,13 @@ endfunction
 
 set colorcolumn=99
 
+
+:highlight ExtraWhitespace ctermbg=red guibg=red
+:match ExtraWhitespace /\s\+$/
+
+
+"====================================
+"= Plugin enabled madness
+"===================================
+execute pathogen#infect()
+" Remember to run :Helptags when installing a bundle

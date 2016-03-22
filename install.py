@@ -1,5 +1,5 @@
 from subprocess import call
-from os import chdir, getenv
+from os import chdir, getenv, listdir
 from os.path import exists, realpath
 
 
@@ -53,6 +53,24 @@ def main():
     print "Installing powerline fonts"
     c('bash ./fonts/powerline_fonts/install.sh')
 
+    # Install vim autoload
+    from_ = 'vim/pathogen.vim'
+    to_ = '%(home)s/.vim/autoload/' %locals()
+    c('mkdir -p %(to_)s' %locals())
+    print 'Copying %(from_)s to %(to_)s' %locals()
+    c('cp %(from_)s %(to_)s' %locals())
+
+    # Install bundles
+    to_ = '%(home)s/.vim/bundle/' %locals()
+    c('mkdir -p %(to_)s' %locals())
+    for entry in listdir('vim/bundle'):
+        from_ = 'vim/bundle/%(entry)s' %locals()
+        print 'Copying %(from_)s to %(to_)s' %locals()
+        c('cp -r %(from_)s %(to_)s' %locals())
+
+    # Generate documentation for all installed bundlles
+    print 'Running vim :Helptags to generate bundle doc'
+    c('gvim +Helptags +qall')
 
 if __name__ == '__main__':
     main()
