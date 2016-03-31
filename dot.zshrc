@@ -86,4 +86,15 @@ source $ZSH/oh-my-zsh.sh
 # ############################
 alias open="open_command"
 alias vim="gvim -v"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+function ws-replace {
+    sed --in-place 's/[[:space:]]\+$//' $1
+}
+function ws-rreplace {
+    find $1 -type f -exec sed --in-place 's/[[:space:]]\+$//' {} \+
+}
+
+# functions
+function gui {
+    javaws http://$1/mcs-gui/mcs-gui.jnlp\?user\=meos
+}
