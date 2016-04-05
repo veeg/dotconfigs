@@ -464,5 +464,5 @@ set colorcolumn=99
 "====================================
 "= Plugin enabled madness
 "===================================
-execute pathogen#infect()
+silent! call pathogen#infect()
 " Remember to run :Helptags when installing a bundle
