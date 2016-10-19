@@ -177,6 +177,10 @@ set noic
 " Enable line numbering
 set number
 
+" Visualize Tabs as '>--------' instead of spaces
+set list
+set listchars=tab:>-     " > is shown at the beginning, - throughout
+
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
@@ -433,7 +437,11 @@ endfunction
 :autocmd BufRead,BufNewFile *.ctest,*.ctest.in setf cmake
 
 :autocmd FileType make set noexpandtab
-:autocmd FileType c set shiftwidth=4        |   set tabstop=4   |   set expandtab
+:autocmd FileType c set shiftwidth=4        |   set tabstop=8   |   set expandtab
+:autocmd FileType cpp set shiftwidth=4        |   set tabstop=8   |   set expandtab
+:autocmd FileType ccc set shiftwidth=4        |   set tabstop=8   |   set expandtab
+:autocmd FileType h set shiftwidth=4        |   set tabstop=8   |   set expandtab
+:autocmd FileType hh set shiftwidth=4        |   set tabstop=8   |   set expandtab
 :autocmd FileType eruby set shiftwidth=2    |   set tabstop=2   |   set expandtab
 :autocmd FileType html set shiftwidth=2     |   set tabstop=2   |   set expandtab
 :autocmd FileType ruby set shiftwidth=2     |   set tabstop=2   |   set expandtab
