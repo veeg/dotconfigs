@@ -96,5 +96,5 @@ function ws-rreplace {
 
 # functions
 function gui {
-    javaws http://$1/mcs-gui/mcs-gui.jnlp\?user\=meos
+    javaws http://$1.spacetec.no/mcs-gui/mcs-gui.jnlp\?user\=meos
 }
