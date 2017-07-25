@@ -425,6 +425,25 @@ endfunction
 "      endif
 "endfunction
 
+
+
+fu! SeeTab()
+  if !exists("g:SeeTabEnabled")
+    let g:SeeTabEnabled = 0
+  end
+  if g:SeeTabEnabled==0
+    syn match leadspace /^\s\+/ contains=syntab
+    exe "syn match syntab /\\s\\{" . &sw . "}/hs=s,he=s+1 contained"
+    hi syntab guibg=Grey
+    let g:SeeTabEnabled=1
+  else
+    syn clear leadspace
+    syn clear syntab
+    let g:SeeTabEnabled=0
+  end
+endfunc
+com! -nargs=0 SeeTab :call SeeTab()
+
 "========================================
 "=      FileTypes                       =
 "========================================
@@ -444,6 +463,8 @@ endfunction
 :autocmd FileType ruby set shiftwidth=2     |   set tabstop=2   |   set expandtab
 :autocmd FileType python set shiftwidth=4   |   set tabstop=4   |   set expandtab
 :autocmd FileType javascript set shiftwidth=2 | set tabstop=2   |   set expandtab
+:autocmd FileType typescript set shiftwidth=2 | set tabstop=2   |   set expandtab
+:autocmd FileType json set shiftwidth=2 | set tabstop=2   |   set expandtab
 :autocmd FileType css set shiftwidth=2      |   set tabstop=2   |   set expandtab
 :autocmd FileType scss set shiftwidth=2      |   set tabstop=2   |   set expandtab
 :autocmd FileType yaml set shiftwidth=2      |   set tabstop=2   |   set expandtab
