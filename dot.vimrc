@@ -61,6 +61,8 @@ let g:mapleader = ","
 " Fast saving
 nmap <leader>w :w!<cr>
 
+"set omnifunc=syntaxcomplete#Complete
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -252,6 +254,13 @@ autocmd BufReadPost *
 " Remember info about open buffers on close
 set viminfo^=%
 set clipboard=unnamed
+
+" Omnicompletion is desired to be <C-Space>, however,
+" the terminal will mess up this mapping on alot of permutations
+" of os/terminal/compiler/vim, and actually send
+" either Nul or <C-@>
+inoremap <Nul> <C-x><C-o>
+inoremap <C-@> <C-x><C-o>
 
 """"""""""""""""""""""""""""""
 " => Status line
