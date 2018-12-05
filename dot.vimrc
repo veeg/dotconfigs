@@ -181,6 +181,13 @@ set number
 set list
 set listchars=tab:>-     " > is shown at the beginning, - throughout
 
+" Highlight column
+set colorcolumn=99
+
+" Mark trailing whitespace with red
+:highlight ExtraWhitespace ctermbg=red guibg=red
+:match ExtraWhitespace /\s\+$/
+
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
@@ -473,15 +480,3 @@ com! -nargs=0 SeeTab :call SeeTab()
 :autocmd FileType xml set shiftwidth=2      |   set tabstop=2   |   set expandtab
 :autocmd FileType xsd set shiftwidth=2      |   set tabstop=2   |   set expandtab
 :autocmd FileType cmake set shiftwidth=2      |   set tabstop=2   |   set expandtab
-
-"Gherkin markup. Need to have the ~/.vim/syntax/cucumber.vim present. Get one from
-"https://raw.github.com/tpope/vim-cucumber/master/syntax/cucumber.vim
-"au Bufread,BufNewFile, *.feature set filetype=gherkin
-"au! Syntax gherkin source ~/.vim/syntax/cucumber.vim
-":autocmd FileType gherkin set shiftwidth=2  | set tabstop=2     | set expandtab
-
-set colorcolumn=99
-
-
-:highlight ExtraWhitespace ctermbg=red guibg=red
-:match ExtraWhitespace /\s\+$/
