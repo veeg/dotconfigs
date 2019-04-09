@@ -306,6 +306,7 @@ func! DeleteTrailingWS()
   %s/\s\+$//ge
   exe "normal `z"
 endfunc
+autocmd BufWrite *.cs :call DeleteTrailingWS()
 autocmd BufWrite *.py :call DeleteTrailingWS()
 autocmd BufWrite *.coffee :call DeleteTrailingWS()
 autocmd BufWrite *.rb :call DeleteTrailingWS()
@@ -490,6 +491,7 @@ com! -nargs=0 SeeTab :call SeeTab()
 :autocmd FileType c set shiftwidth=4        |   set tabstop=8   |   set expandtab
 :autocmd FileType cpp set shiftwidth=4        |   set tabstop=8   |   set expandtab
 :autocmd FileType ccc set shiftwidth=4        |   set tabstop=8   |   set expandtab
+:autocmd FileType cs set shiftwidth=2        |   set tabstop=2   |   set expandtab
 :autocmd FileType h set shiftwidth=4        |   set tabstop=8   |   set expandtab
 :autocmd FileType hh set shiftwidth=4        |   set tabstop=8   |   set expandtab
 :autocmd FileType eruby set shiftwidth=2    |   set tabstop=2   |   set expandtab
