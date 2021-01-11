@@ -33,6 +33,11 @@ if __FILE__ == $PROGRAM_NAME
       `ln -Tfs #{file} #{to}`
     end
 
+    # Install vim-plug - the lightweight plugin manager
+    log "installing vim-plug"
+    `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
+
+
     # Check if rustup is installed
     `which rustup 2>/dev/null`
     if $? != 0
@@ -53,5 +58,9 @@ if __FILE__ == $PROGRAM_NAME
       end
     end
 
+
     $stdout.puts "Finished dotconfigs system install"
+    $stdout.puts "PS: Remember to install vim-plugins"
+    $stdout.puts "PPS: Really should get that automated"
+    $stdout.puts " vim -c :PlugInstall"
 end
