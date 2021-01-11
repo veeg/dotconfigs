@@ -13,6 +13,9 @@ export PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games"
 export PATH="$PATH:/$HOME/.cargo/bin"
 export STARSHIP_CONFIG="$HOME/.starship.toml"
 
+# NOTE: This requires the rust-src component (rustup component add rust-src)
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+
 
 ###
 ### Alias
