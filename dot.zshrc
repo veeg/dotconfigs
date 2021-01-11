@@ -2,10 +2,13 @@
 ### Environment
 ###
 
+# Bring in all rust paths
+source "$HOME/.cargo/env"
+
 # Configure starship command line prompt
 eval "$(starship init zsh)"
 
-export PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games:$HOME/.rvm/bin:$HOME/.rvm/bin"
+export PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games"
 # rustlang
 export PATH="$PATH:/$HOME/.cargo/bin"
 export STARSHIP_CONFIG="$HOME/.starship.toml"
