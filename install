@@ -1,0 +1,57 @@
+#! /usr/bin/env ruby
+# encoding: UTF-8
+
+RUST_PACKAGE = [
+  "alacritty",
+  "dua",
+  "ripgrep",
+  "starship",
+]
+
+def package_bin(package)
+  case package
+  when 'ripgrep' then 'rg'
+  else
+    package
+  end
+end
+
+def log(msg)
+  $stdout.puts "- #{msg}"
+end
+
+
+if __FILE__ == $PROGRAM_NAME
+  $stdout.puts "Running dotconfigs system install"
+
+    dotconfigs_dir = File.dirname(File.expand_path(__FILE__))
+
+    Dir.glob("#{dotconfigs_dir}/dot.*") do |file|
+      to = File.basename(file)
+      to = "~/#{to[3..-1]}"
+      log "Soft-linking dotfile #{to}"
+      `ln -Tfs #{file} #{to}`
+    end
+
+    # Check if rustup is installed
+    `which rustup 2>/dev/null`
+    if $? != 0
+      log "Installing rustup"
+      `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y`
+    else
+      log "rustup already installed"
+    end
+
+    # Install whatever rust binaries not present
+    RUST_PACKAGE.each do |rust|
+      `which #{package_bin(rust)} 2>/dev/null`
+      if $? != 0
+        log "Installing/compiling #{rust}"
+        `cargo install #{rust}`
+      else
+        log "#{rust} already installed"
+      end
+    end
+
+    $stdout.puts "Finished dotconfigs system install"
+end
