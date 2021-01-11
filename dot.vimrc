@@ -485,10 +485,3 @@ set colorcolumn=99
 
 :highlight ExtraWhitespace ctermbg=red guibg=red
 :match ExtraWhitespace /\s\+$/
-
-
-"====================================
-"= Plugin enabled madness
-"===================================
-silent! call pathogen#infect()
-" Remember to run :Helptags when installing a bundle
