@@ -23,6 +23,7 @@ export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
 alias open="open_command"
 alias vim="gvim -v"
+alias less="less -S"
 
 function ws-replace {
     sed --in-place 's/[[:space:]]\+$//' $1
