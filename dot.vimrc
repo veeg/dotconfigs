@@ -315,6 +315,9 @@ autocmd BufWrite *.h :call DeleteTrailingWS()
 autocmd BufWrite *.xml :call DeleteTrailingWS()
 autocmd BufWrite *.adoc :call DeleteTrailingWS()
 
+" Automatically run formatting on safe
+""" This enables the rust.vim plugin autosafe feature
+let g:rustfmt_autosave = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vimgrep searching and cope displaying
@@ -509,3 +512,13 @@ com! -nargs=0 SeeTab :call SeeTab()
 :autocmd FileType xml set shiftwidth=2      |   set tabstop=2   |   set expandtab
 :autocmd FileType xsd set shiftwidth=2      |   set tabstop=2   |   set expandtab
 :autocmd FileType cmake set shiftwidth=2      |   set tabstop=2   |   set expandtab
+
+"
+" vim-plug Plugin
+"
+call plug#begin('~/.vim/plugged')
+
+" rust.vim - Rust file detection, syntax highlighting and formatting
+Plug 'rust-lang/rust.vim'
+
+call plug#end()
