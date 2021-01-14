@@ -8,6 +8,8 @@ source "$HOME/.cargo/env"
 # Configure starship command line prompt
 eval "$(starship init zsh)"
 
+export EDITOR=vim
+
 export PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games"
 # rustlang
 export PATH="$PATH:/$HOME/.cargo/bin"
