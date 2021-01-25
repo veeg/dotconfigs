@@ -35,6 +35,11 @@ function ws-rreplace {
 }
 
 ###
+### Search
+###
+bindkey '^R' history-incremental-search-backward
+
+###
 ### Enter TMUX
 ###
 
