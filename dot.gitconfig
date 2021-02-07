@@ -5,6 +5,7 @@
 	email = vegardsandengen@gmail.com
 [core]
 	whitespace = tab-in-indent
+	editor = vi
 [format]
     pretty = fuller
     #pretty = format:%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
