@@ -520,5 +520,7 @@ call plug#begin('~/.vim/plugged')
 
 " rust.vim - Rust file detection, syntax highlighting and formatting
 Plug 'rust-lang/rust.vim'
+" Syntax highlighting for TOML files
+Plug 'cespare/vim-toml'
 
 call plug#end()
