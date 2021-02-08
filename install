@@ -20,6 +20,14 @@ def log(msg)
   $stdout.puts "- #{msg}"
 end
 
+def install(bin_name, cmd)
+  `which #{bin_name} 2>/dev/null`
+  if $? != 0
+    log "installing #{bin_name}"
+    `#{cmd}`
+  end
+end
+
 
 if __FILE__ == $PROGRAM_NAME
   $stdout.puts "Running dotconfigs system install"
@@ -37,6 +45,10 @@ if __FILE__ == $PROGRAM_NAME
     log "installing vim-plug"
     `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
 
+    # Install zsh
+    install "zsh", "sudo dnf install zsh"
+    # Install a zsh plugin manager: zplug
+    install "zplug", "curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh"
 
     # Check if rustup is installed
     `which rustup 2>/dev/null`
