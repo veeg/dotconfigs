@@ -314,6 +314,8 @@ autocmd BufWrite *.c :call DeleteTrailingWS()
 autocmd BufWrite *.h :call DeleteTrailingWS()
 autocmd BufWrite *.xml :call DeleteTrailingWS()
 autocmd BufWrite *.adoc :call DeleteTrailingWS()
+autocmd BufWrite *.cpp :call DeleteTrailingWS()
+autocmd BufWrite *.cc :call DeleteTrailingWS()
 
 " Automatically run formatting on safe
 """ This enables the rust.vim plugin autosafe feature
