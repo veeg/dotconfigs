@@ -35,9 +35,15 @@ function ws-rreplace {
 }
 
 ###
-### Search
+### Behaviour and Interaction
 ###
+
+# bind CTRL-R to reverse history search
 bindkey '^R' history-incremental-search-backward
+
+# Intelligent tab completions
+autoload -U compinit
+compinit
 
 ###
 ### Enter TMUX
