@@ -2,7 +2,7 @@
 	default = simple
 [user]
 	name = Vegard Sandengen
-	email = vegardsa@spacetec.no
+	email = vegardsandengen@gmail.com
 [core]
 	whitespace = tab-in-indent
 	editor = vi
