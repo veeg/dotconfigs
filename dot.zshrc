@@ -92,7 +92,8 @@ if ! zplug check; then
     zplug install
 fi
 
-zplug load
+# Uncomment this load command if we add any zplugins
+# zplug load
 
 ###
 ### Enter TMUX
