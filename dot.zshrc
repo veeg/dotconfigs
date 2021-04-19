@@ -18,6 +18,9 @@ export STARSHIP_CONFIG="$HOME/.starship.toml"
 # NOTE: This requires the rust-src component (rustup component add rust-src)
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
+# Reset the X environment. Useful using vim-gtk3 that has system clipboard support.
+# Gets rid of 1 second delay on vim startup
+export SESSION_MANAGER=
 
 ###
 ### Alias
