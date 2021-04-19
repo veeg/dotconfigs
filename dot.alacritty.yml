@@ -38,13 +38,13 @@ font:
 
   # The normal (roman) font face to use.
   normal:
-    family: Droid Sans Mono Slashed for Powerline
+    family: Noto Mono
     style: Regular
 
   # The bold font face
   bold:
-    family: Droid Sans Mono Slashed for Powerline
+    family: Noto Mono
 
   # The italic font face
   italic:
-    family: Droid Sans Mono Slashed for Powerline
+    family: Noto Mono
