@@ -493,28 +493,27 @@ com! -nargs=0 SeeTab :call SeeTab()
 :autocmd BufRead,BufNewFile *.ctest,*.ctest.in setf cmake
 
 :autocmd FileType make set noexpandtab
-:autocmd FileType c set shiftwidth=4        |   set tabstop=8   |   set expandtab
-:autocmd FileType cpp set shiftwidth=4        |   set tabstop=8   |   set expandtab
-:autocmd FileType ccc set shiftwidth=4        |   set tabstop=8   |   set expandtab
-:autocmd FileType cs set shiftwidth=2        |   set tabstop=2   |   set expandtab
-:autocmd FileType h set shiftwidth=4        |   set tabstop=8   |   set expandtab
-:autocmd FileType hh set shiftwidth=4        |   set tabstop=8   |   set expandtab
-:autocmd FileType eruby set shiftwidth=2    |   set tabstop=2   |   set expandtab
-:autocmd FileType kt set shiftwidth=4       |   set tabstop=4   |   set noexpandtab
-:autocmd FileType html set shiftwidth=2     |   set tabstop=2   |   set expandtab
-:autocmd FileType ruby set shiftwidth=2     |   set tabstop=2   |   set expandtab
-:autocmd FileType python set shiftwidth=4   |   set tabstop=4   |   set expandtab
-:autocmd FileType javascript set shiftwidth=2 | set tabstop=2   |   set expandtab
-:autocmd FileType typescript set shiftwidth=2 | set tabstop=2   |   set expandtab
-:autocmd FileType json set shiftwidth=2 | set tabstop=2   |   set expandtab
-:autocmd FileType css set shiftwidth=2      |   set tabstop=2   |   set expandtab
-:autocmd FileType scss set shiftwidth=2      |   set tabstop=2   |   set expandtab
-:autocmd FileType yaml set shiftwidth=2      |   set tabstop=2   |   set expandtab
-:autocmd FileType tex set tw=100
-:autocmd FileType go set shiftwidth=4       |   set tabstop=4   |   set noexpandtab
-:autocmd FileType xml set shiftwidth=2      |   set tabstop=2   |   set expandtab
-:autocmd FileType xsd set shiftwidth=2      |   set tabstop=2   |   set expandtab
-:autocmd FileType cmake set shiftwidth=2      |   set tabstop=2   |   set expandtab
+:autocmd FileType c         set shiftwidth=4    | set tabstop=8     | set expandtab
+:autocmd FileType cpp       set shiftwidth=4    | set tabstop=8   | set expandtab
+:autocmd FileType ccc       set shiftwidth=4    | set tabstop=8   | set expandtab
+:autocmd FileType cs        set shiftwidth=2    | set tabstop=2   | set expandtab
+:autocmd FileType h         set shiftwidth=4    | set tabstop=8   | set expandtab
+:autocmd FileType hh        set shiftwidth=4    | set tabstop=8   | set expandtab
+:autocmd FileType eruby     set shiftwidth=2    | set tabstop=2   | set expandtab
+:autocmd FileType kt        set shiftwidth=4    | set tabstop=4   | set noexpandtab
+:autocmd FileType html      set shiftwidth=2    | set tabstop=2   | set expandtab
+:autocmd FileType ruby      set shiftwidth=2    | set tabstop=2   | set expandtab
+:autocmd FileType python    set shiftwidth=4    | set tabstop=4   | set expandtab
+:autocmd FileType js        set shiftwidth=2    | set tabstop=2   | set expandtab
+:autocmd FileType ts        set shiftwidth=2    | set tabstop=2   | set expandtab
+:autocmd FileType json      set shiftwidth=2    | set tabstop=2   | set expandtab
+:autocmd FileType css       set shiftwidth=2    | set tabstop=2   | set expandtab
+:autocmd FileType scss      set shiftwidth=2    | set tabstop=2   | set expandtab
+:autocmd FileType yaml      set shiftwidth=2    | set tabstop=2   | set expandtab
+:autocmd FileType go        set shiftwidth=4    | set tabstop=4   | set noexpandtab
+:autocmd FileType xml       set shiftwidth=2    | set tabstop=2   | set expandtab
+:autocmd FileType xsd       set shiftwidth=2    | set tabstop=2   | set expandtab
+:autocmd FileType cmake     set shiftwidth=2    | set tabstop=2   | set expandtab
 
 "
 " vim-plug Plugin
