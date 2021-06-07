@@ -500,6 +500,7 @@ com! -nargs=0 SeeTab :call SeeTab()
 :autocmd FileType h set shiftwidth=4        |   set tabstop=8   |   set expandtab
 :autocmd FileType hh set shiftwidth=4        |   set tabstop=8   |   set expandtab
 :autocmd FileType eruby set shiftwidth=2    |   set tabstop=2   |   set expandtab
+:autocmd FileType kt set shiftwidth=4       |   set tabstop=4   |   set noexpandtab
 :autocmd FileType html set shiftwidth=2     |   set tabstop=2   |   set expandtab
 :autocmd FileType ruby set shiftwidth=2     |   set tabstop=2   |   set expandtab
 :autocmd FileType python set shiftwidth=4   |   set tabstop=4   |   set expandtab
@@ -524,5 +525,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'rust-lang/rust.vim'
 " Syntax highlighting for TOML files
 Plug 'cespare/vim-toml'
+" Syntax highlighting for kotlin files
+Plug 'udalov/kotlin-vim'
 
 call plug#end()
